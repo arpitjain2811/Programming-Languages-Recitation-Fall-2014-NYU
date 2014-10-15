@@ -1,0 +1,3 @@
+touch ~/.bash_profile; open ~/.bash_profile
+PATH=/usr/local/gnat/bin:$PATH; export PATH
+source ~/.bash_profile
