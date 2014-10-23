@@ -24,7 +24,7 @@ fun append1 ([ ], ys) = ys
 
 
 (* Functional*)
-fn x => if x >= 0.0 then x else ~x
+fn x => if x >= 0.0 then x else ~x;
 
 (* Passing Fucntions *)
 fun exists pred [ ] = false
@@ -43,10 +43,10 @@ fun map f nil = nil
 map (fn i => i+1) [2, 3, 4];
 
 fun reduce (unit, opn, nil) = unit
-  | reduce (unit, opn, h::t) = opn (h, reduce (unit, opn, t))
+  | reduce (unit, opn, h::t) = opn (h, reduce (unit, opn, t));
 
-fun add_up l = reduce (0, op +, l)
-fun mul_up l = reduce (1, op *, l)
+fun add_up l = reduce (0, op +, l);
+fun mul_up l = reduce (1, op *, l);
 
 
 (* Let *)
@@ -54,8 +54,8 @@ fun mul_up l = reduce (1, op *, l)
 fun heronsformula (a, b, c) =
 let val s = (a + b + c) / 2.0
 	in
-		Math.sqrt(s*(s-a)*(s-b)*(s-c));
-	end
+		Math.sqrt(s*(s-a)*(s-b)*(s-c))
+	end;
 heronsformula (15.0,13.0,4.0);
 
 
