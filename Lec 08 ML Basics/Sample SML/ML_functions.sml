@@ -58,7 +58,15 @@ let val s = (a + b + c) / 2.0
 	end;
 heronsformula (15.0,13.0,4.0);
 
+(* Mutually Recursive Functions *)
+fun f 0 = 1
+ |   f  x  =  x * g (x-1)
+and  g 0 = 1
+ |      g y = y * f (y-1);
 
-
-
+(* Let *)
+fun f a b =   
+	let val x = a + b
+		in x * x
+     end;
 

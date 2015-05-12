@@ -1,6 +1,8 @@
 (* Tuples *)
+Control.Print.printDepth := 100;
+Control.Print.printLength := 100;
 
-val tup= ("Coding","Interpreter","Is","Fun");
+val tup= ("Coding","Is","Fun");
 
 #2 tup;
 #1 tup;
@@ -110,6 +112,5 @@ lookup (fn x => x=4) [(1,6),(2,8),(3,9)];
 foldl (fn (a,b) => "(" ^ a ^ "+" ^ b ^ ")") "0" ["1", "2", "3"];
 
 foldr (fn (a,b) => "(" ^ a ^ "+" ^ b ^ ")") "0" ["1", "2", "3"];
-
 
 
